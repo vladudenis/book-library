@@ -4,57 +4,43 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>myLibrary</title>
+    <title>Library</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="navbar">
-        <ul class="navbar-items">
-            <li class="navbar-item dropdown-menu"><a href="">Menu</a></li>
-            <li class="navbar-item"><h1>myLibrary</h1></li>
-        </ul>
-        <ul class="navbar-items">
-            <li class="navbar-item img"><a href="">Img</a></li>
-            <li class="navbar-item sign-button"><button>Sign In</button></li>
-        </ul>
-    </header>
+    <header class="navbar"><h1 class="title">Virtual Library</h1></header>
 
-    <div class="bookshelf">
-        <div class="shelf"><button class="add-book">+</button></div>
-        <div class="shelf"><button class="add-book">+</button></div>
-        <div class="shelf"><button class="add-book">+</button></div>
-        <div class="shelf"><button class="add-book">+</button></div>
-        <div class="shelf"><button class="add-book">+</button></div>
-        <div class="shelf"><button class="add-book">+</button></div>
-        <div class="shelf"><button class="add-book">+</button></div>
+    <div class="main">
+        <button class="add-book">Add New Book</button>
+        <div class="bookshelf"><!-- this is where we add divs that represent books --></div>
     </div>
 
-    <div class="form-popup">
-        <form class="form-container">
-            <h1>New Book</h1>
+    <div class="modal">
+        <form>
+            <h1 class="form-title">New Book</h1>
             <label for="text"><b>Title</b></label>
-            <input type="text" placeholder="Enter Book's Title" name="booktitle" required>
+            <input type="text" placeholder="Enter Book's Title" 
+            name="booktitle" id="title" required>
             <label for="text"><b>Author</b></label>
-            <input type="text" placeholder="Enter Book's Author" name="bookauthor" required>
+            <input type="text" placeholder="Enter Book's Author" 
+            name="bookauthor" id="author" required>
             <label for="text"><b>Pagecount</b></label>
-            <input type="text" placeholder="Enter Book's Pagecount" name="bookpagecount" required>
+            <input type="text" placeholder="Enter Book's Pagecount" 
+            name="bookpagecount" id="pagecount" required>
             <label for="text"><b>Read</b></label>
-            <input type="text" placeholder="Have You Read This Book?" name="bookread" required>
-            <button type="button" class="btn-add">Add Book</button>
-            <button type="button" class="btn-close">Close</button>
+            <input type="text" placeholder="Have You Read This Book?" 
+            name="bookread" id="read" required>
+            <div class="buttons">
+                <button type="submit" class="btn submit-btn">Submit</button>
+                <button type="button" class="btn close-btn">Close</button>
+            </div>
         </form>
     </div>
 
     <footer>
         <p>Created by <a href="https://github.com/vladudenis">vladudenis</a></p>
     </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
-
-<!--
-            <li class="navbar-item"><a href="">Currently Reading</a></li>
-            <li class="navbar-item"><a href="">Finished Books</a></li>
-            <li class="navbar-item"><a href="">Reading List</a></li>
-            <li class="navbar-item"><a href="">Connect With Others</a></li>
--->
