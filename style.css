@@ -57,24 +57,43 @@ body{
     background-color: grey;
 }
 
+.add-book:active{
+    transform: translateY(1px);
+}
+
 .bookshelf{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 20px;
-    border: 1px solid red;
     padding: 20px;
 }
 
 .bookshelf__book{
     background: grey;
+    border: 1px solid black;
+    border-radius: 5px;
+    text-align: center;
 }
 
 .bookshelf__book-text{
     color: black;
+    padding: 0.5rem;
 }
 
 .button{
     background: lightblue;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 0 10px;
+}
+
+.button:hover{
+    background-color: darkcyan;
+}
+
+.button:active{
+    transform: translateY(1px);
 }
 
 /* modal and form */
@@ -125,6 +144,14 @@ input{
     margin: 0 10px;
 }
 
+.btn:hover{
+    background-color: grey;
+}
+
+.btn:active{
+    transform: translateY(1px);
+}
+
 /* footer */
 
 footer{
@@ -132,10 +159,18 @@ footer{
     width: 100%;
     bottom: 0px;
     text-align: center;
+    border-top: 2px solid black;
+    background: gainsboro;
 }
 
 /* responsiveness */
 
-@media screen and (max-width: 600px){
-    
+@media screen and (max-width: 670px){
+    .bookshelf{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .navbar{
+        height: 200px;
+    }
 }
